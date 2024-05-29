@@ -47,7 +47,8 @@ INSERT INTO Dosen (`kd_ds`, `nama`) VALUES
 SELECT*FROM Dosen;
 `````
 Output :
-![alt text](Screenshot/H1.png)
+![Screenshot 2024-05-29 192718](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/a40c7220-8eee-470d-a931-4e018750385f)
+
 
 `````
 insert into dosen values
