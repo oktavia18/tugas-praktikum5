@@ -52,18 +52,39 @@ SELECT*FROM Dosen;
 
 
 `````
-insert into dosen values
-    ("DS001", "Nofal Arianto"),
-    ("DS002", "Ario Talib"),
-    ("DS003", "Ayu Rahmadina"),
-    ("DS004", "Ratna Kumala"),
-    ("DS005", "Vika Prasetyo");
+CREATE TABLE Mahasiswa(
+nim VARCHAR(10) NOT NULL,
+nama VARCHAR(25) NOT NULL,
+jk enum ('L','P'),
+tgl_lahir VARCHAR(15),
+jalan VARCHAR(30) ,
+Kota VARCHAR(15),
+kodepos VARCHAR(15),
+no_hp VARCHAR(15),
+kd_ds VARCHAR(10)
+);
 
-SELECT*FROM Dosen;
+INSERT INTO Mahasiwa (`nim`, `nama`, `jk`, `tgl_lahir`, 'jalan',`Kota`,'kodepos','nohp',`kd_ds`) VALUES
+('1812345', 'Ari Santoso', 'L', '1999-10-11', 'Bekasi', 'DS002'),
+('1823456', 'Dina Marlina', 'P', '1998-11-20', 'Jakarta'),
+('1834567', 'Rahmat Hidayat', 'L', '1999-05-10', 'Bekasi'),
+('1845678', 'Jaka Sampurna', 'L', '2000-10-19', 'Cikarang'),
+('1856789', 'Tia Lestari', 'P', '1999-02-15', 'Karawang'),
+('1867890', 'Anton Sinaga', 'L', '1998-06-22', '', 'Bekasi'),
+('1912345', 'Listia Nastiti', 'P', '2001-10-23', 'Jakarta'),
+('1923456', 'Amira Jarisa', 'P', '2001-01-24', 'Karawang', 'DS004'),
+('1934567', 'Laksana Mardito', 'L', '1999-04-14', 'Cikarang'),
+('1945678', 'Jura Marsina', 'p', '2000-05-10', 'Cikarang'),
+('1956789', 'Dadi Martani', 'L', '2001-08-29', 'Bekasi', 'DS005'),
+('1967890', 'Bayu Laksono', 'L', '1999-07-22', 'Cikarang', 'DS004'),
+
+SELECT * FROM Mahasiswa;
 
 `````
 Output :
-![alt text](Screenshot/H2.png)
+
+![Screenshot 2024-05-29 192902](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/3accd70c-99f8-4605-8124-e4711b920f7d)
+
 
 `````
 INSERT INTO Matakuliah VALUES
