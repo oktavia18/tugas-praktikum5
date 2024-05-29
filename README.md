@@ -8,15 +8,20 @@
 
 # Soal Latihan Praktikum 
 
-![alt text](Screenshot/T1.png)
+![T1](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/fa726396-cd80-439c-8a00-29e9e9a2e058)
 
-![alt text](Screenshot/T2.png)
 
-![alt text](Screenshot/T3.png)
+![T2](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/b5d0d8f7-4724-4ac2-a222-41ebd85d6f8f)
 
-![alt text](Screenshot/T4.png)
 
-![alt text](Screenshot/T5.png)
+![T3](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/84d672fe-20f1-45f5-a57e-702c643fefeb)
+
+
+![T4](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/450b2cb3-3610-43b0-84e9-569fb27ab565)
+
+
+![T5](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/9cb40314-0e88-487f-b914-5770a325d1cd)
+
 
 ## Latihan
 
