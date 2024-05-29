@@ -87,6 +87,12 @@ Output :
 
 
 `````
+CREATE TABLE Matakuliah(
+kd_mk VARCHAR(10) NOT NULL PRIMARY KEY,
+nama VARCHAR(25) NOT NULL,
+sks VARCHAR(30)
+);
+
 INSERT INTO Matakuliah VALUES
 ('MK001', 'Algoritma Dan Pemrogaman', 3),
 ('MK002', 'Praktikum Algoritma Dan Pemrograman', 1),
@@ -100,9 +106,20 @@ INSERT INTO Matakuliah VALUES
 SELECT * FROM Matakuliah;
 `````
 Output :
-![alt text](Screenshot/H3.png)
+
+![Screenshot 2024-05-29 192918](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/a58ce528-cc29-41d6-8000-b4d84735de91)
+
 
 `````
+CREATE TABLE JadwalMengajar(
+kd_mk VARCHAR(50) NOT NULL,
+kd_ds VARCHAR(50) NOT NULL,
+hari ENUM('Senin', 'Selasa', 'Rabu', 'Kamis'),
+jam TIME NOT NULL,
+ruang VARCHAR(50),
+PRIMARY KEY(kd_mk, kd_ds)
+);
+
 INSERT INTO JadwalMengajar VALUES
 ('MK001', 'DS002', 'Senin', '10:00:00', '102'),
 ('MK002', 'DS002', 'Senin', '13:00:00', 'Lab. 01'),
@@ -114,11 +131,22 @@ INSERT INTO JadwalMengajar VALUES
 ('MK008', 'DS005', 'Kamis', '13:00:00', '201');
 
 SELECT*FROM JadwalMengajar;
-`````
-Output :
-![alt text](Screenshot/H4.png)
 
 `````
+Output :
+
+![Screenshot 2024-05-29 192934](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/8ab2c09d-97d4-4bbb-838b-751ac5b9801b)
+
+
+`````
+CREATE TABLE KRSMahasiswa(
+nim VARCHAR(10) NOT NULL,
+kd_mk VARCHAR(50) NOT NULL,
+kd_ds VARCHAR(50) NOT NULL,
+semester VARCHAR(30) NOT NULL,
+nilai VARCHAR(50) DEFAULT NULL
+);
+
 INSERT INTO KRSMahasiswa VALUES
 (1823456, 'MK001', 'DS002', 3, NULL),
 (1823456, 'MK002', 'DS002', 1, NULL),
@@ -130,7 +158,9 @@ INSERT INTO KRSMahasiswa VALUES
 SELECT * FROM KRSMahasiswa;
 `````
 Output :
-![alt text](Screenshot/H5.png)
+
+![Screenshot 2024-05-29 192949](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/ffe476df-c73a-4d0b-9006-b558fcf33a3f)
+
 
 # Latihan
 - JOIN table Mahasiswa dan Dosen
@@ -139,7 +169,9 @@ SELECT Mahasiswa.nim, Mahasiswa.nama, Mahasiswa.jk, Dosen.nama AS "Dosen PA"
 FROM Mahasiswa INNER JOIN Dosen ON Dosen.kd_ds = Mahasiswa.kd_ds;
 `````
 Output :
-![alt text](Screenshot/J1.png)
+
+![Screenshot 2024-05-29 193007](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/f3e29444-2de5-4bcd-9c3f-58cfe37cbcc5)
+
 
 - LEFT JOIN table Mahasiswa dan Dosen
 `````
@@ -147,7 +179,9 @@ SELECT Mahasiswa.nim, Mahasiswa.nama, Mahasiswa.jk, Dosen.nama AS "Dosen PA"
 FROM Mahasiswa LEFT JOIN Dosen ON Dosen.kd_ds = Mahasiswa.kd_ds;
 `````
 Output:
-![alt text](Screenshot/J2.png)
+
+![Screenshot 2024-05-29 193021](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/af07ea6a-a2d1-42a2-94d6-6bbcf7b1cb0e)
+
 
 - JOIN table JadwalMengajar, Dosen, dan Matakuliah
 `````
@@ -157,7 +191,9 @@ LEFT JOIN Matakuliah ON JadwalMengajar.kd_mk = Matakuliah.kd_mk
 LEFT JOIN Dosen ON JadwalMengajar.kd_ds = Dosen.kd_ds;
 `````
 Output:
-![alt text](Screenshot/J3.png)
+
+![Screenshot 2024-05-29 193035](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/a70c63a6-c758-4cc4-8ff7-869c2beb2bb1)
+
 
 - JOIN table JadwalMengajar, Dosen, dan Matakuliah
 `````
@@ -167,7 +203,9 @@ LEFT JOIN Matakuliah ON JadwalMengajar.kd_mk = Matakuliah.kd_mk
 LEFT JOIN Dosen ON JadwalMengajar.kd_ds = Dosen.kd_ds;
 `````
 Output :
-![alt text](Screenshot/J4.png)
+
+![Screenshot 2024-05-29 193054](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/3ba5ca30-eb19-4e67-aca6-f7d8e14b458f)
+
 
 - JOIN tabel KRSMahasiswa, Mahasiswa, Matakuliah, dan Dosen
 `````
@@ -178,6 +216,8 @@ JOIN Matakuliah ON KRSMahasiswa.kd_mk = Matakuliah.kd_mk
 JOIN Dosen ON KRSMahasiswa.kd_ds = Dosen.kd_ds;
 `````
 Output :
-![alt text](Screenshot/J5.png)
 
-## SELESAI <img align="center" alt="Ikhsan-Python" height="40" width="45" src="https://em-content.zobj.net/source/microsoft-teams/337/student_1f9d1-200d-1f393.png"> <img align="center" alt="Ikhsan-Python" height="40" width="45" src="https://em-content.zobj.net/thumbs/160/twitter/348/flag-indonesia_1f1ee-1f1e9.png">
+![Screenshot 2024-05-29 193109](https://github.com/oktavia18/tugas-praktikum5/assets/147913672/3762b435-a185-414a-98a8-af070e0eddc1)
+
+
+## SELESAI 
